@@ -13,7 +13,7 @@ public class ParkirGUI {
     JFrame parkir = new JFrame();
     JLabel top,input,view,delete,nonota,cetaknota,jenisL,platL,hps,cetak,ctk,
             tglkeluarL,blnkeluarL,jamkeluarL,menitkeluarL,tahunkeluarL;
-    JTextField jenis,plat,idxhps,idxctk,idxnota,idxnota2,tglkeluar,blnkeluar,
+    JTextField jenis,plat,idxhps,idxctk,idxnota,tglkeluar,blnkeluar,
             jamkeluar,menitkeluar,tahunkeluar;
     JRadioButton perjam,perhari;
     JButton reg,dlt,cetk,exit,change,lihatdata,insert,clear;
@@ -505,7 +505,6 @@ public class ParkirGUI {
     
     public void view(){
         for(int i=0;i<loopjam;i++){
-            JOptionPane.showMessageDialog(null, AllObjectController.nota.showDataNotajam(i).getNoNota()-1);
             parkirJ+= "\n\nindex = "+i+
                       "\nNo nota= "+AllObjectController.nota.showDataNotajam(i).getNoNota()+
                       "\nKondisi kendaraan\t= "+AllObjectController.kendaraan.showData(AllObjectController.nota.showDataNotajam(i).getNoNota()-1).getKondisi()+
