@@ -4,7 +4,7 @@ import Entity.NotaPerhariEntity;
 import java.util.Date;
 
 public class NotaController {
-    int menu,nonotajam,nonotahari;
+    int menu;
     public void insertNotaJam(int Harga, int NoNota, String kondisi,Date TanggalMasuk, String JamMasuk, String MenitMasuk, int JamKeluar, int MenitKeluar){
         AllObjectModel.notaperjamModel.insert(new NotaPerjamEntity(Harga, NoNota,kondisi, TanggalMasuk, JamMasuk, MenitMasuk, JamKeluar, MenitKeluar));
     }

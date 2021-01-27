@@ -29,7 +29,7 @@ public class Parkir {
     }
     
     public void initComponent(){
-        parkir.setSize(1100, 700);
+        parkir.setSize(1100, 630);
         parkir.setLayout(null);
         parkir.getContentPane().setBackground(Color.PINK);
         
@@ -137,30 +137,21 @@ public class Parkir {
         parkir.add(reg);
         
         delete = new JLabel ("Delete");
-        delete.setBounds(630, 285, 100, 30);
+        delete.setBounds(630, 295, 100, 30);
         delete.setFont(new Font("Times New Roman",Font.BOLD,20));
         parkir.add(delete);
         
         hps = new JLabel ("Index yang dihapus");
-        hps.setBounds(640, 315, 200, 30);
+        hps.setBounds(640, 325, 200, 30);
         parkir.add(hps);
         
         idxhps = new JTextField();
-        idxhps.setBounds(640, 345, 100, 30);
+        idxhps.setBounds(640, 355, 100, 30);
         idxhps.setEditable(false);
         parkir.add(idxhps);
         
-        nonota = new JLabel("Nonota yang dihapus");
-        nonota.setBounds(640, 380, 200, 30);
-        parkir.add(nonota);
-        
-        idxnota2 = new JTextField();
-        idxnota2.setEditable(false);
-        idxnota2.setBounds(640, 410, 100, 30);
-        parkir.add(idxnota2);
-        
         dlt = new JButton("Delete");
-        dlt.setBounds(640, 450, 80, 30);
+        dlt.setBounds(640, 390, 80, 30);
         dlt.setEnabled(false);
         parkir.add(dlt);
         
@@ -345,14 +336,12 @@ public class Parkir {
             @Override
             public void actionPerformed(ActionEvent ae){
                 int idx = Integer.parseInt(idxhps.getText());
-                int notaH = Integer.parseInt(idxnota2.getText());
                 if(AllObjectController.nota.getMenu()==1){ 
                     if(loopjam==0){
                         JOptionPane.showMessageDialog(null,"Data kosong", "Information", JOptionPane.INFORMATION_MESSAGE);  
                     }
                     else{
                         AllObjectController.nota.deleteNotaJam(idx);
-                        AllObjectController.kendaraan.delete(notaH);
                         loopjam--;
                         JOptionPane.showMessageDialog(null,"Data berhasil dihapus", "Information", JOptionPane.INFORMATION_MESSAGE);
                     }
@@ -363,7 +352,6 @@ public class Parkir {
                     }
                     else{
                         AllObjectController.nota.deleteNotaHari(idx);
-                        AllObjectController.kendaraan.delete(notaH);
                         loophari--;
                         JOptionPane.showMessageDialog(null,"Data berhasil dihapus", "Information", JOptionPane.INFORMATION_MESSAGE);
                     }
