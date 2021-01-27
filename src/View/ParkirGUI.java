@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.swing.*;
 
 public class ParkirGUI {
@@ -31,176 +31,145 @@ public class ParkirGUI {
         parkir.setLayout(null);
         parkir.getContentPane().setBackground(Color.PINK);
         
+        top = new JLabel ("Program Sistem Informasi Parkir");
         perjamB = new JButton("Parkir Perjam");
+        perhariB = new JButton("Parkir Perhari");
+        tglkeluarL = new JLabel ("Tanggal Keluar");
+        tglkeluar = new JTextField();
+        blnkeluarL = new JLabel ("Bulan Keluar");
+        blnkeluar = new JTextField();
+        tahunkeluarL = new JLabel ("Tahun Keluar");
+        tahunkeluar = new JTextField();
+        jamkeluarL = new JLabel ("Jam Keluar");
+        jamkeluar = new JTextField();
+        menitkeluarL = new JLabel ("Menit Keluar");
+        menitkeluar = new JTextField(); 
+        areascroll = new JScrollPane(area);
+        input = new JLabel ("Input");
+        jenisL = new JLabel ("Jenis kendaraan");
+        jenis = new JTextField();
+        platL = new JLabel ("Plat kendaraan");
+        plat = new JTextField();
+        cetak = new JLabel ("Cetak");
+        ctk = new JLabel ("Index yang dicetak");
+        nonota = new JLabel("Nonota yang dicetak");
+        idxnota = new JTextField();
+        reg = new JButton("daftar");
+        cetk = new JButton("CETAK");
+        insert = new JButton("INSERT");
+        delete = new JLabel ("Delete");
+        hps = new JLabel ("Index yang dihapus");
+        idxhps = new JTextField();
+        dlt = new JButton("Delete");
+        lihatdata = new JButton("Lihat Data");
+        exit = new JButton("EXIT");
+        change = new JButton("CHANGE");
+        clear = new JButton("CLEAR");
+        
+        
         perjamB.setBounds(10, 200, 150, 30);
         perjamB.setBackground(Color.YELLOW);
-        parkir.add(perjamB);
-        
-        perhariB = new JButton("Parkir Perhari");
         perhariB.setBounds(10, 250, 150, 30);
         perhariB.setBackground(Color.GREEN);
-        parkir.add(perhariB);
-        
-        tglkeluarL= new JLabel ("Tanggal Keluar");
         tglkeluarL.setBounds(850, 70, 200, 30);
         tglkeluarL.setFont(new Font("Times New Roman",Font.BOLD,15));
-        parkir.add(tglkeluarL);
-        
-        tglkeluar= new JTextField();
         tglkeluar.setEditable(false);
         tglkeluar.setBounds(970, 70, 100, 30);
-        parkir.add(tglkeluar);
-        
-        blnkeluarL= new JLabel ("Bulan Keluar");
         blnkeluarL.setBounds(850, 110, 200, 30);
         blnkeluarL.setFont(new Font("Times New Roman",Font.BOLD,15));
-        parkir.add(blnkeluarL);
-        
-        blnkeluar= new JTextField();
         blnkeluar.setEditable(false);
         blnkeluar.setBounds(970, 110, 100, 30);
-        parkir.add(blnkeluar);
-        
-        tahunkeluarL= new JLabel ("Tahun Keluar");
         tahunkeluarL.setBounds(850, 150, 200, 30);
         tahunkeluarL.setFont(new Font("Times New Roman",Font.BOLD,15));
-        parkir.add(tahunkeluarL);
-        
-        tahunkeluar= new JTextField();
         tahunkeluar.setEditable(false);
         tahunkeluar.setBounds(970, 150, 100, 30);
-        parkir.add(tahunkeluar);
-        
-        jamkeluarL= new JLabel ("Jam Keluar");
         jamkeluarL.setBounds(850, 190, 200, 30);
         jamkeluarL.setFont(new Font("Times New Roman",Font.BOLD,15));
-        parkir.add(jamkeluarL);
-        
-        jamkeluar= new JTextField();
         jamkeluar.setEditable(false);
         jamkeluar.setBounds(970, 190, 100, 30);
-        parkir.add(jamkeluar);
-        
-        menitkeluarL= new JLabel ("Menit Keluar");
         menitkeluarL.setBounds(850, 230, 200, 30);
         menitkeluarL.setFont(new Font("Times New Roman",Font.BOLD,15));
-        parkir.add(menitkeluarL);
-        
-        menitkeluar= new JTextField(); 
         menitkeluar.setEditable(false);
         menitkeluar.setBounds(970, 230, 100, 30);
-        parkir.add(menitkeluar);
-        
-        cetk = new JButton("CETAK");
         cetk.setBounds(900, 270, 100, 30);
         cetk.setEnabled(false);
-        parkir.add(cetk);
-        
-        top = new JLabel ("Program Sistem Informasi Parkir");
         top.setBounds(260, 10, 600, 50);
         top.setFont(new Font("Times New Roman",Font.BOLD,40));
-        parkir.add(top);
-        
-        areascroll=new JScrollPane(area);
         areascroll.setBounds(170, 100, 300,330);
         area.setEditable(false);
-        parkir.add(areascroll);
-        
-        input = new JLabel ("Input");
         input.setBounds(490, 90, 100, 30);
-        input.setFont(new Font("Times New Roman",Font.BOLD,20));
-        parkir.add(input);
-        
-        jenisL = new JLabel ("Jenis kendaraan");
+        input.setFont(new Font("Times New Roman",Font.BOLD,20)); 
         jenisL.setBounds(500, 120, 100, 30);
-        parkir.add(jenisL);
-        
-        jenis = new JTextField();
         jenis.setBounds(500, 150, 100, 30);
         jenis.setEditable(false);
-        parkir.add(jenis);
-        
-        platL = new JLabel ("Plat kendaraan");
         platL.setBounds(500, 180, 100, 30);
-        parkir.add(platL);
-        
-        plat = new JTextField();
         plat.setBounds(500, 210, 100, 30);
         plat.setEditable(false);
-        parkir.add(plat);
-        
-        reg = new JButton("daftar");
         reg.setBounds(500, 250, 80, 30);
         reg.setEnabled(false);
-        parkir.add(reg);
-        
-        delete = new JLabel ("Delete");
-        delete.setBounds(630, 295, 100, 30);
-        delete.setFont(new Font("Times New Roman",Font.BOLD,20));
-        parkir.add(delete);
-        
-        hps = new JLabel ("Index yang dihapus");
-        hps.setBounds(640, 325, 200, 30);
-        parkir.add(hps);
-        
-        idxhps = new JTextField();
-        idxhps.setBounds(640, 355, 100, 30);
-        idxhps.setEditable(false);
-        parkir.add(idxhps);
-        
-        dlt = new JButton("Delete");
-        dlt.setBounds(640, 390, 80, 30);
-        dlt.setEnabled(false);
-        parkir.add(dlt);
-        
-        cetak = new JLabel ("Cetak");
         cetak.setBounds(630, 90, 100, 30);
         cetak.setFont(new Font("Times New Roman",Font.BOLD,20));
-        parkir.add(cetak);
-        
-        ctk = new JLabel ("Index yang dicetak");
         ctk.setBounds(640, 120, 200, 30);
-        parkir.add(ctk);
-        
         idxctk = new JTextField();
         idxctk.setBounds(640, 150, 100, 30);
         idxctk.setEditable(false);
-        parkir.add(idxctk);
-        
-        nonota = new JLabel("Nonota yang dicetak");
         nonota.setBounds(640, 180, 200, 30);
-        parkir.add(nonota);
-        
-        idxnota = new JTextField();
         idxnota.setEditable(false);
         idxnota.setBounds(640, 210, 100, 30);
-        parkir.add(idxnota);
-        
-        insert = new JButton("INSERT");
         insert.setBounds(640, 250, 80, 30);
         insert.setEnabled(false);
-        parkir.add(insert);
-        
-        lihatdata = new JButton("Lihat Data");
+        delete.setBounds(630, 295, 100, 30);
+        delete.setFont(new Font("Times New Roman",Font.BOLD,20));
+        hps.setBounds(640, 325, 200, 30);
+        idxhps.setBounds(640, 355, 100, 30);
+        idxhps.setEditable(false);
+        dlt.setBounds(640, 390, 80, 30);
+        dlt.setEnabled(false);
         lihatdata.setBounds(490, 330, 100, 30);
         lihatdata.setEnabled(false);
-        parkir.add(lihatdata);
-        
-        exit = new JButton("EXIT");
         exit.setBounds(970, 550, 90, 30);
         exit.setBackground(Color.CYAN);
-        parkir.add(exit);
-        
-        change = new JButton("CHANGE");
         change.setBounds(20, 550, 90, 30);
         change.setBackground(Color.red);
-        parkir.add(change);
-        
-        clear = new JButton("CLEAR");
         clear.setBounds(550, 550, 90, 30);
         clear.setBackground(Color.GREEN);
+        
+        parkir.add(perjamB);   
+        parkir.add(perhariB);
+        parkir.add(tglkeluarL);
+        parkir.add(tglkeluar);
+        parkir.add(blnkeluarL);
+        parkir.add(blnkeluar);
+        parkir.add(tahunkeluarL);
+        parkir.add(tahunkeluar);
+        parkir.add(jamkeluarL);
+        parkir.add(jamkeluar);
+        parkir.add(menitkeluarL);
+        parkir.add(menitkeluar);
+        parkir.add(cetk);
+        parkir.add(top);
+        parkir.add(areascroll);
+        parkir.add(input);
+        parkir.add(jenisL);
+        parkir.add(jenis);
+        parkir.add(platL);
+        parkir.add(plat);
+        parkir.add(reg);
+        parkir.add(cetak);
+        parkir.add(ctk);
+        parkir.add(idxctk);
+        parkir.add(nonota);
+        parkir.add(idxnota);
+        parkir.add(insert);
+        parkir.add(delete);
+        parkir.add(hps);
+        parkir.add(idxhps);
+        parkir.add(dlt);
+        parkir.add(lihatdata);
+        parkir.add(exit);
+        parkir.add(change);
         parkir.add(clear);
-                
+        
         parkir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         parkir.setVisible(true);
         parkir.setLocationRelativeTo(null);
@@ -217,6 +186,13 @@ public class ParkirGUI {
                 perjamB.setEnabled(false);
                 perhariB.setEnabled(false);
                 lihatdata.setEnabled(true);
+                if(loopjam>=1){
+                    idxhps.setEditable(true);
+                    dlt.setEnabled(true);
+                    idxctk.setEditable(true);
+                    insert.setEnabled(true);
+                    idxnota.setEditable(true);
+                }
                 JOptionPane.showMessageDialog(null,"Anda akan mengisi data parkir perjam", "Information", JOptionPane.INFORMATION_MESSAGE);
             }
         });
@@ -231,6 +207,13 @@ public class ParkirGUI {
                 lihatdata.setEnabled(true);
                 perjamB.setEnabled(false);
                 perhariB.setEnabled(false);
+                if(loophari>=1){
+                    idxhps.setEditable(true);
+                    dlt.setEnabled(true);
+                    idxctk.setEditable(true);
+                    insert.setEnabled(true);
+                    idxnota.setEditable(true);
+                }
                 JOptionPane.showMessageDialog(null,"Anda akan mengisi data parkir perhari", "Information", JOptionPane.INFORMATION_MESSAGE);
             }
         });
@@ -291,7 +274,6 @@ public class ParkirGUI {
                         AllObjectController.nota.insertNotaHari(tanggalmasuk,bulanmasuk,tahunmasuk,0,0,0,"parkir",0,nonotahari);
                         JOptionPane.showMessageDialog(null,"Berhasil menginputkan data", "Information", JOptionPane.INFORMATION_MESSAGE);
                         loophari++;
-                        
                     }
                     kosong();
                     idxhps.setEditable(true);
@@ -535,5 +517,6 @@ public class ParkirGUI {
         jamkeluar.setText(null);
         menitkeluar.setText(null);
         tahunkeluar.setText(null);
+        idxnota.setText(null);
     }
 }

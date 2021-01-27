@@ -5,7 +5,6 @@ import Entity.KendaraanEntity;
 public class KendaraanController {
     public void insert (String PlatNomor,String JenisKendaraan, String Kondisi){
         AllObjectModel.kendaraanModel.insert(new KendaraanEntity(PlatNomor, JenisKendaraan, Kondisi));
-    
     }
     
     public KendaraanEntity showData(int index){
