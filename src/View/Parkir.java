@@ -301,7 +301,6 @@ public class Parkir {
                     idxctk.setEditable(true);
                     insert.setEnabled(true);
                     idxnota.setEditable(true);
-                    idxnota2.setEditable(true);
                 }catch(Exception e){
                   JOptionPane.showMessageDialog(null,"Format Pengisian salah", "Information", JOptionPane.INFORMATION_MESSAGE);  
                 }
