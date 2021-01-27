@@ -9,10 +9,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.*;
 
-public class Parkir {
+public class ParkirGUI {
     JFrame parkir = new JFrame();
-    JLabel top,input,view,delete,nonota,cetaknota,jenisL,platL,hps,cetak,ctk,tglkeluarL,blnkeluarL,jamkeluarL,menitkeluarL,tahunkeluarL;
-    JTextField jenis,plat,idxhps,idxctk,idxnota,idxnota2,tglkeluar,blnkeluar,jamkeluar,menitkeluar,tahunkeluar;
+    JLabel top,input,view,delete,nonota,cetaknota,jenisL,platL,hps,cetak,ctk,
+            tglkeluarL,blnkeluarL,jamkeluarL,menitkeluarL,tahunkeluarL;
+    JTextField jenis,plat,idxhps,idxctk,idxnota,idxnota2,tglkeluar,blnkeluar,
+            jamkeluar,menitkeluar,tahunkeluar;
     JRadioButton perjam,perhari;
     JButton reg,dlt,cetk,exit,change,lihatdata,insert,clear;
     JTextArea area = new JTextArea();
@@ -24,11 +26,7 @@ public class Parkir {
     private boolean jumlahH=false,jumlahJ=false;
     private String parkirJ="",parkirH="";
     
-    public Parkir(){
-       initComponent();
-    }
-    
-    public void initComponent(){
+    public ParkirGUI(){
         parkir.setSize(1100, 630);
         parkir.setLayout(null);
         parkir.getContentPane().setBackground(Color.PINK);
@@ -460,7 +458,6 @@ public class Parkir {
                 blnkeluar.setEditable(false);
                 tahunkeluar.setEditable(false);
                 idxnota.setEditable(false);
-                idxnota2.setEditable(false);
                 area.setText("");
             }
         });
@@ -482,6 +479,7 @@ public class Parkir {
             }
         });
     }
+    
     String parkirjam(int i,int nota){
         String CparkirJ = "====BANDAR UDARA JUANDA SURABAYA===="+ 
                          "\nJenis kendaraan\t= "+AllObjectController.kendaraan.showData(nota-1).getJenisKendaraan()+
